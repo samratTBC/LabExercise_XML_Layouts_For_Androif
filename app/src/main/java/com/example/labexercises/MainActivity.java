@@ -33,35 +33,32 @@ public class MainActivity extends AppCompatActivity {
         calculate_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(costOfService.getText().toString()==null)
-                {
-                    Toast.makeText(MainActivity.this, "Enter tip to proceed.", Toast.LENGTH_LONG);
+                try {
+                        int checkedId = radiogroup.getCheckedRadioButtonId();
+                        double tip = 0.0;
+                        double costService = Double.parseDouble(costOfService.getText().toString());
+
+                        switch (checkedId) {
+                            case R.id.option_eighteen_percent:
+                                tip = 0.18 * costService;
+                                break;
+                            case R.id.option_fifteen_percent:
+                                tip = 0.15 * costService;
+                                break;
+                            case R.id.option_twenty_percent:
+                                tip = 0.20 * costService;
+                                break;
+                        }
+
+                        Boolean isOn = round_tip_switch.isChecked();
+                        if (isOn)
+                            tip_text.setText(Integer.toString((int) Math.ceil(tip)));
+                        else
+                            tip_text.setText(Double.toString(tip));
                 }
-                else
+                catch (Exception e)
                 {
-                    int checkedId = radiogroup.getCheckedRadioButtonId();
-                    double tip=0.0;
-                    double costService= Double.parseDouble(costOfService.getText().toString());
-
-                    switch (checkedId)
-                    {
-                        case R.id.option_eighteen_percent:
-                            tip= 0.18 * costService;
-                            break;
-                        case R.id.option_fifteen_percent:
-                            tip = 0.15 * costService;
-                            break;
-                        case R.id.option_twenty_percent:
-                            tip= 0.20 * costService;
-                            break;
-                    }
-
-                    Boolean isOn = round_tip_switch.isChecked();
-                    if(isOn)
-                        tip_text.setText(Integer.toString((int) Math.ceil(tip)));
-                    else
-                        tip_text.setText(Double.toString(tip));
-
+                    Toast.makeText(MainActivity.this, "Enter tip to proceed.", Toast.LENGTH_LONG).show();
                 }
             }
         });

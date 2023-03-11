@@ -4,67 +4,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/heading_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/conversion_app"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/measurement_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your measurements"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heading_tv"
+        android:inputType="numberDecimal"
+        />
+
+    <RadioGroup
+        android:id="@+id/measurement_options_rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/ml_fluid_ounces_option"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/measurement_et">
+
+        <RadioButton
+            android:id="@+id/ml_fluid_ounces_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ml_fluid_ounces_option" />
+
+        <RadioButton
+            android:id="@+id/grams_to_cups_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grams_to_cups_option" />
+
+        <RadioButton
+            android:id="@+id/cups_to_tbsp_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cups_to_tbsp_option" />
+
+        <RadioButton
+            android:id="@+id/cups_to_ml_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cups_to_ml_option" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calculate_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/measurement_options_rg" />
+
+    <Switch
+        android:id="@+id/switch_option_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/measurement_options_rg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toEndOf="@+id/measurement_options_rg"
+        app:layout_constraintTop_toTopOf="@+id/measurement_options_rg"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <Switch
+        android:id="@+id/switch_option_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/measurement_options_rg"
+        app:layout_constraintEnd_toEndOf="@+id/switch_option_one"
+        app:layout_constraintTop_toBottomOf="@+id/switch_option_one"
+        app:layout_constraintVertical_bias="0.17000002" />
+
+    <Switch
+        android:id="@+id/switch_option_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/measurement_options_rg"
+        app:layout_constraintEnd_toEndOf="@+id/switch_option_two"
+        app:layout_constraintTop_toBottomOf="@+id/switch_option_two"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <Switch
+        android:id="@+id/switch_option_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/measurement_options_rg"
+        app:layout_constraintEnd_toEndOf="@+id/switch_option_three"
+        app:layout_constraintTop_toBottomOf="@+id/switch_option_three"
+        app:layout_constraintVertical_bias="0.56" />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/conversion_app"
-        android:id="@+id/heading_tv"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        />
+        android:text="@string/result"
+        android:id="@+id/result_measurement_tv"
+        app:layout_constraintTop_toBottomOf="@id/calculate_btn"
+        app:layout_constraintEnd_toEndOf="@id/calculate_btn"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/measurement_et"
-        app:layout_constraintTop_toBottomOf="@id/heading_tv"
-        app:layout_constraintStart_toStartOf="parent"
-        android:hint="Enter your measurements"
-        />
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/measurement_options_rg"
-        app:layout_constraintTop_toBottomOf="@id/measurement_et"
-        app:layout_constraintStart_toStartOf="parent"
-        android:checkedButton="@id/ml_fluid_ounces_option"
-        android:orientation="vertical"
-        >
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ml_fluid_ounces_option"
-            android:text="@string/ml_fluid_ounces_option"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/grams_to_cups_option"
-            android:text="@string/grams_to_cups_option"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cups_to_tbsp_option"
-            android:text="@string/cups_to_tbsp_option"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cups_to_ml_option"
-            android:text="@string/cups_to_ml_option"/>
-        
-    </RadioGroup>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/measurement_options_rg"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/calculate"
-        />
-    
 </androidx.constraintlayout.widget.ConstraintLayout>

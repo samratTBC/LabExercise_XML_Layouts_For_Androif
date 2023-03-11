@@ -1,9 +1,14 @@
 <resources>
     <string name="app_name">Lab Exercises</string>
     <string name="conversion_app">Kitchen Conversion</string>
-    <string name="ml_fluid_ounces_option">Fluid to Ounces</string>
+    <string name="ml_fluid_ounces_option">ml to Fluid Oz</string>
     <string name="grams_to_cups_option">Grams to Cups</string>
     <string name="cups_to_tbsp_option">Cups to Tbsp</string>
     <string name="cups_to_ml_option">Cups to Ml</string>
     <string name="calculate">Calculate</string>
+    <string name="ounces_fluid_ml_option">Fluid Oz to ml</string>
+    <string name="cups_to_grams_option">Cups to Grams</string>
+    <string name="tbsp_to_cups_option">Tbsp to Cup</string>
+    <string name="ml_to_cups_option">ml to cups</string>
+    <string name="result">Result</string>
 </resources>

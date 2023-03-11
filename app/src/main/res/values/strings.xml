@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Lab Exercises</string>
+    <string name="conversion_app">Kitchen Conversion</string>
+    <string name="ml_fluid_ounces_option">Fluid to Ounces</string>
+    <string name="grams_to_cups_option">Grams to Cups</string>
+    <string name="cups_to_tbsp_option">Cups to Tbsp</string>
+    <string name="cups_to_ml_option">Cups to Ml</string>
+    <string name="calculate">Calculate</string>
 </resources>

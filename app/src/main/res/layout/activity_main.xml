@@ -69,46 +69,17 @@
         android:layout_height="wrap_content"
         android:text="@string/calculate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/measurement_options_rg" />
+        app:layout_constraintTop_toBottomOf="@+id/reverse_measurement_switch" />
 
     <Switch
-        android:id="@+id/switch_option_one"
-        android:layout_width="wrap_content"
+        android:id="@+id/reverse_measurement_switch"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/measurement_options_rg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.96"
-        app:layout_constraintStart_toEndOf="@+id/measurement_options_rg"
-        app:layout_constraintTop_toTopOf="@+id/measurement_options_rg"
-        app:layout_constraintVertical_bias="0.060000002" />
-
-    <Switch
-        android:id="@+id/switch_option_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/measurement_options_rg"
-        app:layout_constraintEnd_toEndOf="@+id/switch_option_one"
-        app:layout_constraintTop_toBottomOf="@+id/switch_option_one"
-        app:layout_constraintVertical_bias="0.17000002" />
-
-    <Switch
-        android:id="@+id/switch_option_three"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/measurement_options_rg"
-        app:layout_constraintEnd_toEndOf="@+id/switch_option_two"
-        app:layout_constraintTop_toBottomOf="@+id/switch_option_two"
-        app:layout_constraintVertical_bias="0.32" />
-
-    <Switch
-        android:id="@+id/switch_option_four"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/measurement_options_rg"
-        app:layout_constraintEnd_toEndOf="@+id/switch_option_three"
-        app:layout_constraintTop_toBottomOf="@+id/switch_option_three"
-        app:layout_constraintVertical_bias="0.56" />
-
+        android:text="@string/reverse_calculate"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/calculate_btn"
+        app:layout_constraintStart_toStartOf="@+id/measurement_options_rg"
+        app:layout_constraintTop_toBottomOf="@+id/measurement_options_rg" />
 
     <TextView
         android:layout_width="wrap_content"

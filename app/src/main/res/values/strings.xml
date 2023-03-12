@@ -11,4 +11,5 @@
     <string name="tbsp_to_cups_option">Tbsp to Cup</string>
     <string name="ml_to_cups_option">ml to cups</string>
     <string name="result">Result</string>
+    <string name="reverse_calculate">Reverse Measurements</string>
 </resources>

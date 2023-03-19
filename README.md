@@ -15,6 +15,6 @@ certain measurements to calculate are provided in the radio options through whic
 # Demo app working
 
 
+![kitchen_measurements2](https://user-images.githubusercontent.com/110808053/226163815-4b0cae29-9156-4888-b02b-0aa9ccf2af5f.gif)
 
 
-![kitchen_measurements](https://user-images.githubusercontent.com/110808053/226163028-d6d0a844-88f4-4dab-ada5-f324eed1f24d.gif)
